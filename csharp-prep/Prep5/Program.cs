@@ -39,7 +39,7 @@ class Program
         return userNumber;
     }
 
-    // Function SquareNumber- suares user's fav. int.
+    // Function SquareNumber- squares user's fav. int.
     static int SquareNumber(int userNumber)
     {
          int numberSquared = userNumber * userNumber;
