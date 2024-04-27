@@ -59,6 +59,5 @@ class Program
         {
             Console.WriteLine(digit);
         }
-
     }
 } 
