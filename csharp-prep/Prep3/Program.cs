@@ -15,7 +15,7 @@ class Program
         int magicNumber = randomGenerator.Next(1,11);
         
         int guess = -1;
-         // Do while loop for user guessing the magic number.
+         // Do while loop for the user guessing the magic number.
         do
         { 
             // Let user guess magic number and change string response to int.
