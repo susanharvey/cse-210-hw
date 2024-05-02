@@ -8,7 +8,7 @@ class Program
        Console.WriteLine("Welcome to Sandbox World!");
        List<string> prompts = new List<string>
        {
-        "yourday", "your dog", "your spouse", "your food"
+        "your day", "your dog", "your spouse", "your food", "your exercise"
        };
 
        Random random = new Random();
