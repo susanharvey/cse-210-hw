@@ -1,13 +1,22 @@
+using System;
+
 public class PromptGenerator
 {
-    public List<string>_prompts;
-
+    public List<string> _prompts = new List<string>
+    {
+        "What tender mercies from the Lord did I see in my day today?",
+        "What acts of kindness did I do today?",
+        "What was my most meaningful interaction with someone else today?",
+        "What inspiration did I receive today as I studied my scriptures?",
+        "What was the funniest thing in my day today?",
+        "What was my favorite part of today?"
+    };
+    
+    public Random random = new Random();
     public string GetRandomPrompt()
     {
-        return "";
+        string randomPrompt = _prompts[random.Next(_prompts.Count)];
+        return randomPrompt;
     }
-    
-
-
 }
 
