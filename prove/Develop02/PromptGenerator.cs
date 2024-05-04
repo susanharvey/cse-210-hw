@@ -1,7 +1,9 @@
 using System;
 
+//Create PromptGenerator Class.
 public class PromptGenerator
 {
+    //Create and initialize a journal promptlist with journal prompts for the user.
     public List<string> _prompts = new List<string>
     {
         "What tender mercies from the Lord did I see in my day today?",
@@ -11,7 +13,8 @@ public class PromptGenerator
         "What was the funniest thing in my day today?",
         "What was my favorite part of today?"
     };
-    
+
+    //call and initialize Random, creat GetRandomPrompt Function, Return random prompt.
     public Random random = new Random();
     public string GetRandomPrompt()
     {

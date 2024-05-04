@@ -1,19 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Security.Cryptography.X509Certificates;
-
 
 class Program
 {
     static void Main(string[] args)
     {
-        int  optionChoice = -1;
+        //intialize OptionChoice, _promptText and journl 
+        int optionChoice = -1;
         PromptGenerator _promptText = new PromptGenerator();
         Journal journal = new Journal();
 
         Console.WriteLine("Welcome to your journal program.");
 
+        //Begin While loop for choice options. List choice options 
+        // for user and parse the option string to an int.
         while (optionChoice != 5)
         {   
             Console.WriteLine("Please select one of the following choices:");
@@ -23,15 +24,20 @@ class Program
             Console.WriteLine("4 Display all journal entries");
             Console.WriteLine("5 Quit");
             Console.Write("What would you like to do? ");
-            optionChoice = int.Parse(Console.ReadLine());
-            Console.WriteLine(optionChoice);
 
-            if (optionChoice == 1)
+            optionChoice = int.Parse(Console.ReadLine());
+
+            // Begin if and if else statements to handle each options choice.
+
+            // get current date, random prompt, and user journal entry,
+            //call journal AddEntry function
+            if (optionChoice == 1) 
             {
                 Entry entryText = new Entry();
 
                 DateTime theCurrentTime = DateTime.Now;
                 entryText._date = theCurrentTime.ToShortDateString();
+
                 entryText._promptText = _promptText.GetRandomPrompt();
                 Console.WriteLine(entryText._promptText);
                 Console.Write("> ");
@@ -40,43 +46,40 @@ class Program
                 journal.AddEntry(entryText);
             }
 
+            //Get journal txt file name from user, call journal SaveToFile Function
             else if (optionChoice == 2)
             {
-                
-                Console.WriteLine("Saving to file....");
                 Console.WriteLine("What is the  file name (name.txt)? ");
                 string fileName = Console.ReadLine();
 
                journal.SaveToFile(fileName);
             }
         
+            //Get journal txt file name from user, call journal LoadFromFile Function
             else if (optionChoice == 3)
             {
-                Console.WriteLine("File is loading...");
-
                 Console.WriteLine("What is the  file name (name.txt)? ");
                 string fileName = Console.ReadLine();
 
                 journal.LoadFromFile(fileName);
-
-                Console.WriteLine("File successfully loaded...");
             } 
-
+ 
+            //Call the journal DisplayAllfunction
             else if (optionChoice == 4)  
             {
                 journal.DisplayAll();
-
             }  
 
+            //Quit the Program if choice 5 is selected
             else if (optionChoice == 5)
             {
                 break;
             } 
 
+            //display inavid input if user types in an error and lets them reselect.
             else
                 Console.WriteLine("Invalid input");
-
-            // Statements that are one line long do not need body brackets.
+        // note to me, statements that are one line long do not need body brackets.
         }
     }
 }
