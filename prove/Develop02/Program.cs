@@ -6,10 +6,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        //intialize OptionChoice, _promptText and journl 
+        //intialize OptionChoice, _promptText, journal, and affirmation 
         int optionChoice = -1;
         PromptGenerator _promptText = new PromptGenerator();
         Journal journal = new Journal();
+        Affirmations affirmation = new Affirmations();
 
         Console.WriteLine("Welcome to your journal program.");
 
@@ -29,7 +30,7 @@ class Program
 
             // Begin if and if else statements to handle each options choice.
 
-            // get current date, random prompt, and user journal entry,
+            // get current date, current affirmation, random prompt, and user journal entry,
             //call journal AddEntry function
             if (optionChoice == 1) 
             {
@@ -37,6 +38,8 @@ class Program
 
                 DateTime theCurrentTime = DateTime.Now;
                 entryText._date = theCurrentTime.ToShortDateString();
+
+                entryText._affirmation = affirmation.DisplayNextAffirmation();
 
                 entryText._promptText = _promptText.GetRandomPrompt();
                 Console.WriteLine(entryText._promptText);
