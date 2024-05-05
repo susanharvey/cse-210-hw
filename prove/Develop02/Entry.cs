@@ -3,7 +3,7 @@ using System;
 //Create Entry Class.
 public class Entry
 {
-   //create Entry class attributes
+   //Create Entry class attributes.
    public string _date;
    public string _affirmation;
    public string _promptText;

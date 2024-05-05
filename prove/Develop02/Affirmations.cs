@@ -3,7 +3,7 @@ using System;
 public class Affirmations
 {
     //Create and intitialize affirmations list for the user.
-    //Source for the affirmations
+    //Source for the affirmations is at
     // https://www.lifesahmazing.com/31-affirmations-improve-your-self-image/
 
     public List<string> _affirmations = new List<string>

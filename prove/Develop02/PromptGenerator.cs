@@ -14,7 +14,7 @@ public class PromptGenerator
         "What was my favorite part of today?"
     };
 
-    //call and initialize Random, creat GetRandomPrompt Function, Return random prompt.
+    //Call and initialize Random, creat GetRandomPrompt Function, Return random prompt.
     public Random random = new Random();
     public string GetRandomPrompt()
     {

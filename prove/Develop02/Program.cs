@@ -6,7 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        //intialize OptionChoice, _promptText, journal, and affirmation 
+        //Intialize OptionChoice, _promptText, journal, & affirmation. 
         int optionChoice = -1;
         PromptGenerator _promptText = new PromptGenerator();
         Journal journal = new Journal();

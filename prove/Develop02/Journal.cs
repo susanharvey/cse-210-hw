@@ -5,7 +5,7 @@ using System.Collections.Generic;
 //Create Journal class.
 public class Journal
 {
-   //create and intialize journal entries list.
+   //Create and intialize journal entries list.
    public List<Entry>_entries = new List<Entry>();
    // note to me. Above code can be
    // simplified: new() because initializing on the same line. Hence ... under new.
@@ -17,7 +17,7 @@ public class Journal
       _entries.Add(newEntry);
    }
 
-   //create DisplayAll function which uses a foreach loop to iterate 
+   //Create DisplayAll function which uses a foreach loop to iterate 
    //through all the journal entries in the entries list 
    //and calls entries Display function to format and display it. 
    //Return Void
