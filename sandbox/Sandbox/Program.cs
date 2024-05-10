@@ -4,7 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-       Console.WriteLine("Welcome to Sandbox World!");
-      
+       Console.WriteLine("Welcome to Sandbox World!"); 
     }
 }

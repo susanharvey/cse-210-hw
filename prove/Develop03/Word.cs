@@ -41,7 +41,6 @@ public class Word
     //GetDisplayText method, no parameters.
     public string GetDisplayText()
     {
-
         // if loop, if _isHidden, return _hiddenText or else return _textWord.
         if (_isHidden)
             return _hiddenText;

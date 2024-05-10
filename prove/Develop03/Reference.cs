@@ -30,11 +30,11 @@ public class Reference
         _verse = verse;
      } */
 
-   //member method GetDislayText, no parameters, to create and get reference for scripture.
-   //return display text for reference
+   //member method GetDislayText, no parameters,
+   // to create and get reference for scripture,
+   //return display text for reference.
    public string GetDisplayText()
    {
-
       //if loop (if endVerse is 0) to determine which reference display 
       //to use.
       if (_endVerse == 0)

@@ -10,18 +10,17 @@ public class Scripture
     private List<Word> _words = new List<Word>();
     public Random random = new Random();
 
-    //Constructor Scripture with parameters reference and text.
+    //Constructor Scripture, parameters reference and text.
     public Scripture(Reference reference, string text)
     {
-
         //initilaize _reference
         _reference = reference;
 
         //create string array and split text at "".
         string[] words = text.Split(" ");
 
-        //For each loop, loop through split array words 
-        //and add each word as an object to _words list.
+        //For each loop, loop through split array words, 
+        //add each word as an object to _words list.
         foreach (string word in words)
         {
             _words.Add(new Word(word));
@@ -33,13 +32,11 @@ public class Scripture
     //to hide random words, no return.
     public void HideRandomWords(int numberToHide)
     {
-
         //For loop, set i to 0, 
         //as long as i is less than numberToHide,
         //increment i by 1 in each loop
         for (int i = 0; i < numberToHide; i++)
         {
-
             //Create index variable
             int index;
 
@@ -67,7 +64,6 @@ public class Scripture
     //return text.
     public string GetDisplayText()
     {
-
         //Add scripture reference to the display.
         string text = $"{_reference.GetDisplayText()} ";
 
