@@ -4,16 +4,13 @@ class Program
 {
     public static void Main(string[] args)
     {
-
-        //Code for when I orignally hardcoded the scripture to memorize.
+         //Code for when I orignally hardcoded the scripture to memorize.
 
         //string scriptureText = "For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.";
         //Scripture scripture = new(new Reference("Isaiah", 9, 6), scriptureText);
 
 
-
         //User welcome, let user pick scripture, get and read user scripture input.
-
         Console.WriteLine("Welcome to the scripture memorizer program.");
         Console.WriteLine("Choose a scripture you want to memorize.");
 
