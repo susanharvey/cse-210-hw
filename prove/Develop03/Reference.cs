@@ -1,5 +1,4 @@
 using System;
-using System.Dynamic;
 
 //Create public Reference class, create private member variables
 // _book, _chapter, _verse, and _endverse.
