@@ -5,6 +5,8 @@ using System;
 //and special congrats messages for reaching 5000, or 10000 points.
 
 //Congrats Message Source: https://www.americangreetings.com/inspiration/what-to-write/congratulations-messages
+
+
 class Program
 {
     static void Main(string[] args)
