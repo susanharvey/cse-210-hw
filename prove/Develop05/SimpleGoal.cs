@@ -35,7 +35,6 @@ public class SimpleGoal : Goal
         Console.WriteLine("");
 
         return _points;
-
     }
 
     //IsComplete method, no parameters, return _isComplete

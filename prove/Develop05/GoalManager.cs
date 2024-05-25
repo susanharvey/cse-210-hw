@@ -77,28 +77,25 @@ public class GoalManager
     //DisplayPlayerInfo method, no parameter, no return
     //Displays user's score
     //if score is above 5000 points, special message
-    //if score is above 10000 points, special message and reset score to 0.
+    //if score is above 10000 points, special message
     public void DisplayPlayerInfo()
     {
         //Displays the players current score.
         Console.WriteLine($"You have {_score} points.");
         
-        //if loop, condition: score >+ 10,000
+        //if loop, condition: score >= 10,000
         if (_score >= 10000)
         {
             //user message
-            Console.WriteLine($"You have accumulated 10000 points!");
-            Console.WriteLine("You are remarkable!\nCelebrate your successes and growth! What goal will you set next?\nYour score is resetting to 0.");
-
-            _score = 0; 
+            Console.WriteLine($"You have accumulated 10000 or more points!");
+            Console.WriteLine("You are remarkable!\nCelebrate your successes and growth! What goal will you set next?");
         }
         else if (_score >= 5000) //else if, condition: score >= 5000
             {
                 //user message
                 Console.WriteLine($"You have accumulated 5000 or more points!");
-                Console.WriteLine("You are a superstar!\nKeep setting and achieving goals!!!");
+                Console.WriteLine("You are a goal setting superstar!\nKeep setting and achieving goals!!!");
             }
-
         Console.WriteLine();
     }
 
