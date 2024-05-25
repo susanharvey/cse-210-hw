@@ -1,59 +1,80 @@
 using System;
 
+//CheckList Goal derived class
 public class ChecklistGoal : Goal
 {
-    //standard attributes
-    //will need to track the number of times it has been completed, 
-    //the target number of times the user is striving for, 
-    //and the bonus for achieving that target.
-   private int _amountCompleted;
-   private int _target;
-   private int _bonus;
+    //Declare field variables 
+    private int _amountCompleted;
+    private int _target;
+    private int _bonus;
+    private bool _isComplete;
 
-   public ChecklistGoal(string name, string description, string points, int target, int bonus) : base(name, description, points)
-   {
-        // In addition to the standard attributes, 
-        //a checklist goal also needs the target 
-        //and the bonus amounts. Then, it should 
-        //set the amount completed to begin at 0.
-    
-   }
+    //CheckListGoal initialization constructor for derived classes
+    //parameters: target and bonus and from base: name, description, points
+    public ChecklistGoal(string name, string description, int points, int target, int bonus) : base(name, description, points)
+    {
+        //Initialize field variables
+        _amountCompleted = 0;
+        _isComplete = false;
+        _target = target;
+        _bonus = bonus;
+    }
 
-   public override void RecordEvent()
-   {
-    //RecordEvent event:mark what has been accomplished
-    /*This method should do whatever is necessary
-    for each specific kind of goal, such as marking 
-    a simple goal complete and adding to the number
-    of times a checklist goal has been completed.
-    It should return the point value associated
-    with recording the event (keep in mind that
-    it may contain a bonus in some cases if a 
-    checklist goal was just finished, for example).*/
-   }
+    // 2nd CheckListGoal initialization constructor for derived classes
+    //parameters: isComplete, bonus, amountCompleted, target and from base: name, description, points
+    public ChecklistGoal(string name, string description, int points, bool isComplete, int bonus, int amountCompleted, int target) : base(name, description, points)
+    {
+        //Initialize field variables
+        _amountCompleted = amountCompleted;
+        _isComplete = isComplete;
+        _target = target;
+        _bonus = bonus;
+    }
 
+    //Override RecordEvent method, no parameters
+    //return points + bonus if target reached, otherwise return points
+    public override int RecordEvent()
+    {
+        //Increase amountCompleted by 1 everytime RecordEvent is called.
+        _amountCompleted += 1;
+
+        //If loop, condition: amountcompleted = target
+        if (_amountCompleted == _target)
+        {
+            //goal is complete
+            _isComplete = true;
+
+            //Congrats message
+            Console.WriteLine("It's about both the journey and the destination! Enjoy your success!!");
+            Console.WriteLine("");
+
+            return _points + _bonus;
+        }
+         //Congrats message
+        Console.WriteLine("");
+        Console.WriteLine("You deserve every exciting and wonderful thing about this!");
+        Console.WriteLine("");
+
+        return _points;
+    }
+
+    //Override IsComplete method, no parameters, return _isComplete
     public override bool IsComplete()
     {
-        //should return true if the goal is completed.
-        //. The way you determine if a goal is complete
-        // is different for each type of goal. 
-        return true; //or false ?
+        return _isComplete;
     }
 
+    //Override GetDetailsString method, no parameters
+    //return base GetDetailsString and amountCompleted/target
     public override string GetDetailsString()
     {
-        /*return the details of a goal that could
-        be shown in a list. It should include the 
-        checkbox, the short name, and description. */
-        // ChecklistGoal goal:overridden to shown the number
-        // of times the goal has been accomplished so far.
-        return "";
+        return base.GetDetailsString() + $" --Currently Completed: {_amountCompleted}/{_target}";
     }
 
+    //Override GetStringRepresentation method, no parameters
+    //return base GetStringRepresentation and isCompplete, bonus, amountCompleted and target.
     public override string GetStringRepresentation()
     {
-        //provide all of the details of a goal in a way
-        //that is easy to save to a file, and then load later.
-        return "";
+        return base.GetStringRepresentation() + $"|{_isComplete}|{_bonus}|{_amountCompleted}|{_target}";
     }
 }
