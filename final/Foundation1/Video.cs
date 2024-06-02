@@ -12,7 +12,7 @@ public class Video
     public List<Comment> _comments = new();
 
 
-    //Video Constructor, parameters: title, author, length
+    //Video Constructor, Parameters: title, author, length
     //Initialize field variables
     public Video(string title, string author, int lengthInSeconds )
     {
@@ -24,6 +24,7 @@ public class Video
 
     //NumberOfComments method, Parameters: none
     //Return: number of comments
+    //Uses  _comments.Count to get length of list
     public int NumberOfComments()
     {
         int numberOfComments = _comments.Count();
@@ -32,10 +33,9 @@ public class Video
 
 
     //DisplayVideoInfo method, Parameters: none, Return: void
-    //
     public void DisplayVideoInfo() 
     {
-        //Display title, author, length, and number of comments
+        //Display video title, author, length, and number of comments
         Console.WriteLine($"Video Title: {_title}");
         Console.WriteLine($"Video Author: {_author}");
         Console.WriteLine($"Video Length(secs): {_lengthInSeconds}");
@@ -49,7 +49,7 @@ public class Video
         //Initialize counter i variable to 1
         int i = 1;
 
-        //Foreach loop, condition: comments in _comments
+        //Foreach loop, condition: for comment in list _comments
         foreach (Comment comment in _comments)
         {
             //Display comment author and comment text, increase counter i by 1 each loop

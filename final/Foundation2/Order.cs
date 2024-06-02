@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-//publc Order Class
+//public Order Class
 public class Order
 {
-    //Declare field variables: object customer, initialize _products list
+    //Declare field variables: Customer object customer, initialize _products list
     private Customer _customer;
     private List<Product> _products = new List<Product>();
 
@@ -18,6 +18,8 @@ public class Order
     }
 
 
+    //GetCustomerOrderName method, Parameters: none
+    //Return _customerName by calling GetCustomerName method
     public string GetCustomerOrderName()
     {
         return _customer.GetCustomerName();

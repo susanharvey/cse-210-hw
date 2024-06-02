@@ -17,7 +17,7 @@ class Program
 
         //Nest, Initialze, and set new customer1 order, new customer1 and new customer1 address
         //Parameters: customer1 name, customer1 address and customer1 product list
-        Order customer1Order = new(new Customer("Sally Jones",  new Address("1212 North St", "Raleigh", "North Carolina", "USA")), customer1Products);
+        Order customer1Order = new(new Customer("Sally Jones",  new Address("1212 North Street", "Raleigh", "North Carolina", "USA")), customer1Products);
 
         //Display CustomerName
         Console.WriteLine();

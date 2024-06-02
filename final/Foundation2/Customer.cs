@@ -25,7 +25,6 @@ public class Customer
     }
 
 
-    
     //GetCustmerName method, Parameters: none
     //Return _customerName
     public string GetCustomerName()
