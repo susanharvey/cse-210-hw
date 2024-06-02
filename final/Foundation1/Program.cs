@@ -35,7 +35,6 @@ class Program
         video2._comments.Add(new Comment("Ben Dorr", "Helped me have the courage to move forward."));
  
        
- 
         //Initialize and set new video3, Parameters: video title, author, length
         //Add video3 to _videos list
         Video video3 = new("Finding Hope After Loss", "Brooklyn Neill", 360);
@@ -49,7 +48,6 @@ class Program
         video3._comments.Add(new Comment("John Hubert", "I look forward to healing."));
  
        
- 
         //Foreach loop, condition: for video in list _videos
         //For each video, call DisplayVideoInfo and DisplayVideoComments
         //Display Video and Comment info
