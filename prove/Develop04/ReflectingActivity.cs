@@ -9,7 +9,7 @@ public class ReflectingActivity : Activity
     //Sets all to private.
     private List<string> _prompts;
     private List<string> _questions;
-     private string _randomPrompt;
+    private string _randomPrompt;
 
     //Added static to accumulate used prompts and questions across multiple instances.
     private static List<string> _usedPrompts = new(); 
