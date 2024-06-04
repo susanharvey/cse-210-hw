@@ -8,7 +8,7 @@ public class Customer
     private Address _customerAddress;
 
 
-    //Custmer constructor, Parameters: customerName, customerAddress
+    //Customer constructor, Parameters: customerName, customerAddress
     //Initialize field variables
     public Customer(string customerName, Address address)
     {

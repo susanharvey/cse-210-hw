@@ -3,13 +3,13 @@ using System;
 //Public OutdoorGatherings class derived from Event class.
 public class OutdoorGatherings : Event
 {
-    //Declare field variables: _weather)
+    //Declare field variables: _weather
     private string _weather;
 
 
     //OutdoorGatherings constructor for full details, Parameters: eventType, title, description, date, time, address, and weather
-    //Inherits and initializes eventType,  title, description, date, time, and address fields
-    //Inititialzes weather field
+    //Inherits and initializes eventType, title, description, date, time, and address fields
+    //Inititializes weather field
     public OutdoorGatherings(string eventType, string title, string description, string date, string time, Address address, string weather) : base(eventType, title, description, date, time, address)
     {
         _eventType = eventType;

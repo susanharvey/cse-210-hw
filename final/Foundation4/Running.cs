@@ -7,7 +7,7 @@ public class Running : Activity
     private double _distance;
 
 
-    //Running constructor, Parameters: type, date, lengthInMinutes
+    //Running constructor, Parameters: type, date, lengthInMinutes, distance
     //Inherits and initializes type, date, lengthInMinutes
     //Inititialzes distance
     public Running(string type, string date, int lengthInMinutes, double distance ) : base(type, date, lengthInMinutes)
@@ -25,7 +25,7 @@ public class Running : Activity
 
 
     //Override base GetSpeed method, Parameters: none
-    //Return _distance / _lengthInMinutes * 60
+    //Return (_distance / _lengthInMinutes) * 60
     //to calculate the running speed
     public override double GetSpeed() //km per hour
     {

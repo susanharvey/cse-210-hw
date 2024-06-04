@@ -1,5 +1,4 @@
 using System;
-using System.Reflection;
 
 //Public Swimming class derived from Activity class.
 public class Swimming : Activity
@@ -8,7 +7,7 @@ public class Swimming : Activity
     private double _numberOfLaps;
 
 
-    //Swimming constructor, Parameters: type, date, lengthInMinutes
+    //Swimming constructor, Parameters: type, date, lengthInMinutes, numberOfLaps
     //Inherits and initializes type, date, lengthInMinutes
     //Inititialzes _numberOfLaps
     public Swimming(string type, string date, int lengthInMinutes, double numberOfLaps ) : base(type, date, lengthInMinutes)
@@ -17,7 +16,6 @@ public class Swimming : Activity
     }
 
 
-    
     //Override base GetDistance method, Parameters: none
     //Return _numberOfLaps * 50 / 1000
     //to calculate the swimming distance
@@ -29,16 +27,16 @@ public class Swimming : Activity
 
     //Override base GetSpeed method, Parameters: none
     //Return GetDistance() / _lengthInMinutes * 60
-    //Calling the GetDistance method and calculate the swimming speed
+    //Calls the GetDistance method and calculates the swimming speed
     public override double GetSpeed()
     {
-        return GetDistance() / _lengthInMinutes * 60; //per hour
+        return GetDistance() / _lengthInMinutes * 60; //km per hour
     }
 
 
     //Override base GetPace method, Parameters: none
     //Return _lengthInMinutes / GetDistance()
-    //Calling the GetDistance method and calculate the swimming pace
+    //Calls the GetDistance method and calculates the swimming pace
     public override double GetPace()
     {
         return _lengthInMinutes / GetDistance(); //min per km

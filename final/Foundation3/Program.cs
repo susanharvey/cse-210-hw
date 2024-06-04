@@ -17,9 +17,11 @@ class Program
             new Address(
                 "5542 Constitution Avenue", "Phoenix", "Arizona", "USA"
             ),
-            "Br. Burton",
+            "Tyler Burton",
             125
             );
+
+
         Console.WriteLine();
         Console.WriteLine($"Lecture: {lecture.GetEventName()} Full Details\n\n{lecture.GetFullDetails()}");
         Console.WriteLine();
@@ -59,7 +61,7 @@ class Program
         Console.WriteLine();
 
 
-        //Initialize new receptions event, nest new event Address,  Parameters: eventType, title, description, date, time, address, email
+        //Initialize new outdoorGatherings event, nest new event Address,  Parameters: eventType, title, description, date, time, address, weather
         //Display reception full details, standard details, and short description
         //by calling GetFullDetails, GetStandardDetails, and GetShortDescription methods
 

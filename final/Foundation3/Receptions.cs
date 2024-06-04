@@ -23,7 +23,7 @@ public class Receptions : Event
 
 
     //GetFullDetails method, Parameters: none
-    //Return full details of event type,  title, description, date, time, address, and rsvp email
+    //Return full details of eventType, title, description, date, time, address, and rsvp email
     //Get address by calling GetEventAddress.GetAddressString methods
     public string GetFullDetails()
     {

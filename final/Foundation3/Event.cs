@@ -39,7 +39,7 @@ public class Event
 
     //Event Constructor for short description, Parameters: eventType, title, date
     //Set field variables
-    public Event(string eventType,string title, string date)
+    public Event(string eventType, string title, string date)
     {
          _eventType = eventType;
           _title = title;

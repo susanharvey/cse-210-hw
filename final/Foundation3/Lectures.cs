@@ -9,7 +9,7 @@ public class Lectures : Event
 
 
     //Lectures constructor for full details, Parameters: eventType, title, description, date, time, address, speaker, and capacity
-    //Inherits and initializes eventType title, description, date, time and address, speaker, and capacity fields
+    //Inherits and initializes evenType, title, description, date, time and address
     //Inititialzes speaker and capacity fields
     public Lectures(string eventType, string title, string description, string date, string time, Address address, string speaker, int capacity) : base(eventType, title, description, date, time, address)
     {
@@ -25,7 +25,7 @@ public class Lectures : Event
 
 
     //GetFullDetails method, Parameters: none
-    //Return full details of event type,  title, description, date, time, address, speaker and capacity
+    //Return full details of eventType,  title, description, date, time, address, speaker, and capacity
     //Get address by calling GetEventAddress.GetAddressString methods
     public string GetFullDetails()
     {
